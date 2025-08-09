@@ -1,0 +1,397 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Verdana", Tahoma, Geneva, sans-serif;
+  background: #f9fafb;
+  color: #1e293b;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* CONTAINER */
+.conteneur {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.barre-laterale {
+  background-color: #2563eb;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 30px;
+}
+
+.section-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  height: 70px;
+  width: auto;
+}
+
+.section-logo h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  padding: 12px 15px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.menu a:hover,
+.menu a.actif {
+  background-color: #1e40af;
+}
+
+.menu a i {
+  font-size: 16px;
+}
+
+.barre-laterale-footer {
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 15px;
+}
+
+.infos-utilisateur-barre-laterale {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.infos-utilisateur-barre-laterale .photo-utilisateur {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* MAIN */
+.principal {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  border-bottom: 1px solid #e2e8f0;
+  background: white;
+}
+
+.entete-left h1 {
+  font-size: 24px;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.entete-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.infos-utilisateur {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nom-utilisateur {
+  font-weight: 600;
+  color: #334155;
+}
+
+.photo-utilisateur {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.icone-notification {
+  font-size: 20px;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+/* TOP ACTION BAR - BOUTON AJOUTER */
+.barre-action-haut {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 30px 20px 30px;
+  background: #f3f4f6;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.bouton-ajouter-rdv {
+  background-color: #2563eb;
+  border: none;
+  color: white;
+  padding: 14px 22px;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.bouton-ajouter-rdv:hover {
+  background-color: #1e40af;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.7);
+}
+
+/* STATS BAR */
+.barre-statistiques {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 30px;
+  background: #e0e7ff;
+  gap: 20px;
+  border-bottom: 1px solid #cbd5e1;
+  overflow-x: auto;
+  /* Assure que la largeur est 100% et que c’est horizontal */
+  width: 100%;
+  flex-wrap: nowrap; /* important : ne pas laisser les cartes passer en colonne */
+}
+
+.cartes-statistiques {
+  display: flex;
+  flex-direction: row !important; /* forcer la ligne */
+  gap: 20px;
+  width: 100%;
+  overflow-x: auto; /* permet de scroller si trop large */
+  padding-bottom: 10px;
+}
+
+.carte {
+  min-width: 170px;
+  background: white;
+  padding: 20px 25px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 3px 8px rgb(37 99 235 / 0.15);
+  transition: box-shadow 0.3s ease;
+  flex-shrink: 0; /* ne pas réduire la carte */
+}
+
+.carte:hover {
+  box-shadow: 0 5px 15px rgb(37 99 235 / 0.3);
+}
+
+.carte-icon {
+  font-size: 28px;
+  padding: 15px;
+  background: #2563eb;
+  color: white;
+  border-radius: 50%;
+  min-width: 58px;
+  text-align: center;
+}
+
+.carte h3 {
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.carte p {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* CONTENT COLUMNS */
+.colonnes-contenu {
+  display: grid;
+  grid-template-columns: 3.5fr 1fr; /* tableau 75%, horaires 25% */
+  gap: 30px;
+  padding: 30px;
+}
+
+/* APPOINTMENTS TABLE */
+.rdv {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+  overflow-x: auto;
+}
+
+.rdv h2 {
+  color: #2563eb;
+  margin-bottom: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 600px;
+}
+
+thead tr {
+  background: #2563eb;
+  color: white;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+.statut {
+  padding: 6px 12px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+  display: inline-block;
+  min-width: 70px;
+}
+
+.statut.en-cours {
+  background-color: #f97316; /* orange */
+}
+
+.statut.termine {
+  background-color: #16a34a; /* vert */
+}
+
+.statut.annule {
+  background-color: #dc2626; /* rouge */
+}
+
+.statut.a-venir {
+  background-color: #2563eb; /* bleu */
+}
+
+/* OPENING HOURS */
+.horaires-ouverture {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+  font-size: 14px;
+  color: #334155;
+  height: fit-content;
+}
+
+.horaires-ouverture h2 {
+  color: #2563eb;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.horaires-ouverture ul {
+  list-style: none;
+}
+
+.horaires-ouverture ul li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.horaires-ouverture ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .colonnes-contenu {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .conteneur {
+    grid-template-columns: 1fr;
+  }
+
+  .barre-laterale {
+    height: auto;
+    padding: 15px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu {
+    display: flex;
+    gap: 15px;
+  }
+
+  .entete {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .barre-statistiques {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .cartes-statistiques {
+    overflow-x: visible;
+    justify-content: center;
+  }
+
+  .bouton-ajouter-rdv {
+    width: 100%;
+  }
+}
