@@ -74,6 +74,12 @@ body {
   padding-top: 15px;
 }
 
+.pied-barre-laterale a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+}
+
 .infos-utilisateur-barre-laterale {
   display: flex;
   align-items: center;
@@ -181,9 +187,9 @@ body {
   gap: 20px;
   border-bottom: 1px solid #cbd5e1;
   overflow-x: auto;
-  /* Assure que la largeur est 100% et que c’est horizontal */
+  /* faire en sorte de garder toute la largeur */
   width: 100%;
-  flex-wrap: nowrap; /* important : ne pas laisser les cartes passer en colonne */
+  flex-wrap: nowrap; /* important : eviter que les cartes passer en colonne */
 }
 
 .cartes-statistiques {
@@ -311,7 +317,7 @@ tbody tr:hover {
   background-color: #2563eb; /* bleu */
 }
 
-/* OPENING HOURS */
+/* heur d'ouverture */
 .horaires-ouverture {
   background: white;
   border-radius: 12px;
@@ -348,6 +354,267 @@ tbody tr:hover {
   left: 0;
   color: #2563eb;
   font-weight: bold;
+}
+
+/* Styles spécifiques à la page Profil */
+
+.contenu-page {
+  padding: 30px;
+}
+
+.contenu-page h2 {
+  color: #2563eb;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+form.form-profil {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+}
+
+form.form-profil input[type="text"],
+form.form-profil input[type="email"],
+form.form-profil input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+form.form-profil input[type="text"]:focus,
+form.form-profil input[type="email"]:focus,
+form.form-profil input[type="password"]:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.4);
+}
+
+form.form-profil button.bouton-ajouter-rdv {
+  background-color: #2563eb;
+  border: none;
+  color: white;
+  padding: 14px 0;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form.form-profil button.bouton-ajouter-rdv:hover {
+  background-color: #1e40af;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.7);
+}
+
+/* Footer */
+footer.footer {
+  margin-top: auto;
+  padding: 15px;
+  text-align: center;
+  background: #f1f5f9;
+  color: #555;
+}
+
+/* Style spécifique pour la page inscription */
+
+main.principale {
+  padding: 40px 30px;
+  background: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form.inscription-form {
+  width: 100%;
+  max-width: 450px;
+  background: #f3f4f6;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+  font-size: 14px;
+  color: #1e293b;
+}
+form.inscription-form h2 {
+  color: #2563eb;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 22px;
+}
+form.inscription-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+form.inscription-form input[type="text"],
+form.inscription-form input[type="email"],
+form.inscription-form input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+form.inscription-form input[type="text"]:focus,
+form.inscription-form input[type="email"]:focus,
+form.inscription-form input[type="password"]:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.4);
+}
+form.inscription-form button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px 0;
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+form.inscription-form button:hover {
+  background-color: #1e40af;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.7);
+}
+form.inscription-form .link-connexion {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #334155;
+}
+form.inscription-form .link-connexion a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+form.inscription-form .link-connexion a:hover {
+  text-decoration: underline;
+}
+
+/* Styles spécifiques à la page Contacts */
+
+.contenu-page {
+  padding: 30px;
+}
+
+.contenu-page h2 {
+  color: #2563eb;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+.contenu-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+}
+
+.contenu-page form input[type="text"],
+.contenu-page form input[type="email"],
+.contenu-page form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.contenu-page form input[type="text"]:focus,
+.contenu-page form input[type="email"]:focus,
+.contenu-page form textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.4);
+}
+
+.bouton-ajouter-rdv {
+  background-color: #2563eb;
+  border: none;
+  color: white;
+  padding: 14px 0;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bouton-ajouter-rdv:hover {
+  background-color: #1e40af;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.7);
+}
+
+/* Footer style */
+
+footer.footer {
+  margin-top: auto;
+  padding: 15px;
+  text-align: center;
+  background: #f1f5f9;
+  color: #555;
+}
+
+.caracteristiques {
+  padding: 30px;
+  background: #f9fafb;
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+.caracteristiques h2 {
+  color: #2563eb;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+.caracteristiques-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.caracteristique {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 250px;
+  text-align: center;
+  flex: 1 1 250px;
+}
+
+.caracteristique img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  object-fit: cover;
+  height: 160px;
+}
+
+.caracteristique h3 {
+  color: #2563eb;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.caracteristique p {
+  font-size: 14px;
+  color: #334155;
 }
 
 /* RESPONSIVE */

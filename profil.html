@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HAYBE BARBER - Profil</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="profil.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="conteneur">
+      <!-- SIDEBAR -->
+      <aside class="barre-laterale">
+        <div class="section-logo">
+          <img
+            src="logoblanhaybe-removebg-preview.png"
+            alt="Logo HAYBE BARBER"
+            class="logo"
+          />
+        </div>
+        <nav class="menu">
+          <a href="index.html"><i class="fas fa-home"></i> Accueil</a>
+          <a href="services.html"><i class="fas fa-users"></i> Services</a>
+          <a href="contacts.html"
+            ><i class="fas fa-calendar-check"></i> Contacts</a
+          >
+          <a class="actif" href="profil.html"
+            ><i class="fas fa-cog"></i> Profil</a
+          >
+        </nav>
+        <div class="pied-barre-laterale">
+          <div class="infos-utilisateur-barre-laterale">
+            <a href="inscription.html"
+              ><i class="fa-solid fa-right-from-bracket"></i> Log-out</a
+            >
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="principal">
+        <header class="entete">
+          <div class="entete-gauche">
+            <h1><i class="fas fa-cog"></i> Profil</h1>
+          </div>
+          <div class="entete-droite">
+            <div class="infos-utilisateur">
+              <span class="nom-utilisateur">Ibrahim Nour</span>
+              <img src="ibra.jpg" alt="Admin" class="photo-utilisateur" />
+              <i class="fas fa-bell icone-notification"></i>
+            </div>
+          </div>
+        </header>
+
+        <section class="contenu-page">
+          <h2>Informations du compte</h2>
+          <form class="form-profil">
+            <input
+              type="text"
+              placeholder="Nom complet"
+              value="Ibrahim Nour"
+              name="nom"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              value="Ibrahim@gmail.com"
+              name="email"
+              required
+            />
+            <input
+              type="password"
+              placeholder="Mot de passe"
+              name="password"
+              required
+            />
+            <button type="submit" class="bouton-ajouter-rdv">
+              Mettre à jour
+            </button>
+          </form>
+        </section>
+
+        <footer class="footer">
+          © 2025 HAYTON BARBER - Tous droits réservés.
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
