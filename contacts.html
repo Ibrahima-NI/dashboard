@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HAYBE BARBER - Contacts</title>
     <link href="style.css" rel="stylesheet" />
-    <link href="contacts.css" rel="stylesheet" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
@@ -30,8 +29,11 @@
           >
           <a href="profil.html"><i class="fas fa-cog"></i> Profil</a>
         </nav>
+
+        <!-- Log-out avec photo admin -->
         <div class="pied-barre-laterale">
           <div class="infos-utilisateur-barre-laterale">
+            <img src="ibra.jpg" alt="Admin" class="photo-utilisateur" />
             <a href="inscription.html"
               ><i class="fa-solid fa-right-from-bracket"></i> Log-out</a
             >
@@ -47,7 +49,7 @@
           </div>
           <div class="entete-droite">
             <div class="infos-utilisateur">
-              <span class="nom-utilisateur">Ibrahim Nour</span>
+              <span class="nom-utilisateur">Admin : Ibrahim Nour</span>
               <img src="ibra.jpg" alt="Admin" class="photo-utilisateur" />
               <i class="fas fa-bell icone-notification"></i>
             </div>
@@ -55,17 +57,43 @@
         </header>
 
         <section class="contenu-page">
-          <h2>Formulaire de contact</h2>
-          <form>
-            <input type="text" placeholder="Nom" required />
-            <input type="email" placeholder="Email" required />
-            <textarea placeholder="Votre message" rows="5" required></textarea>
-            <button type="submit" class="bouton-ajouter-rdv">Envoyer</button>
-          </form>
+          <h2>Messages des clients</h2>
+          <div class="rdv">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nom</th>
+                  <th>Email</th>
+                  <th>Message</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ali Mohamed</td>
+                  <td>ali@example.com</td>
+                  <td>Je souhaite prendre un rendez-vous samedi prochain.</td>
+                  <td>11/08/2025</td>
+                </tr>
+                <tr>
+                  <td>Fatima Hassan</td>
+                  <td>fatima@example.com</td>
+                  <td>Bonjour, avez-vous des disponibilités pour demain ?</td>
+                  <td>10/08/2025</td>
+                </tr>
+                <tr>
+                  <td>Omar Abdallah</td>
+                  <td>omar@example.com</td>
+                  <td>Merci pour la coupe, excellent service !</td>
+                  <td>09/08/2025</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <footer class="footer">
-          © 2025 HAYTON BARBER - Tous droits réservés.
+          © 2025 HAYBE BARBER - Tous droits réservés.
         </footer>
       </main>
     </div>
