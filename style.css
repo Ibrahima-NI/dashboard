@@ -617,47 +617,47 @@ footer.footer {
 }
 
 /* RESPONSIVE */
-@media (max-width: 1024px) {
-  .colonnes-contenu {
-    grid-template-columns: 1fr;
+/* 📱 Tablettes : largeur <= 1024px */
+@media screen and (max-width: 1024px) {
+  .conteneur {
+    grid-template-columns: 70px 1fr; /* Sidebar plus petite */
+  }
+
+  .menu a span {
+    display: none; /* Cacher le texte, ne laisser que les icônes */
+  }
+
+  .form-profil {
+    max-width: 80%;
   }
 }
 
-@media (max-width: 700px) {
+/* 📱 Mobiles : largeur <= 700px */
+@media screen and (max-width: 700px) {
   .conteneur {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Sidebar en haut */
   }
 
   .barre-laterale {
-    height: auto;
-    padding: 15px 20px;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: auto;
   }
 
   .menu {
     display: flex;
-    gap: 15px;
+    gap: 10px;
   }
 
-  .entete {
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
+  .form-profil {
+    max-width: 100%;
   }
 
-  .barre-statistiques {
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 20px;
-  }
-
-  .cartes-statistiques {
-    overflow-x: visible;
-    justify-content: center;
-  }
-
-  .bouton-ajouter-rdv {
-    width: 100%;
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 }
