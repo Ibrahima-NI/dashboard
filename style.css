@@ -162,7 +162,7 @@ body {
   background-color: #2563eb;
   border: none;
   color: white;
-  padding: 14px 22px;
+  padding: 22px 22px;
   font-weight: 700;
   font-size: 15px;
   border-radius: 10px;
@@ -356,6 +356,34 @@ tbody tr:hover {
 }
 
 /* Styles spécifiques à la page Profil */
+
+.contenu-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 30px;
+}
+.form-profil {
+  width: 100%;
+  max-width: 400px;
+}
+.photo-profil-section {
+  text-align: center;
+}
+.photo-profil-section img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 3px solid #2563eb;
+}
+.photo-profil-section input[type="file"] {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
 
 .contenu-page {
   padding: 30px;
